@@ -26,7 +26,8 @@ open class PasscodeLockViewController: UIViewController, PasscodeLockTypeDelegat
             }
         }
     }
-    
+
+    @IBOutlet open var numberKeys: [PasscodeSignButton] = []
     @IBOutlet open weak var titleLabel: UILabel?
     @IBOutlet open weak var descriptionLabel: UILabel?
     @IBOutlet open var placeholders: [PasscodeSignPlaceholderView] = [PasscodeSignPlaceholderView]()
@@ -39,6 +40,29 @@ open class PasscodeLockViewController: UIViewController, PasscodeLockTypeDelegat
     open var dismissCompletionCallback: (()->Void)?
     open var animateOnDismiss: Bool
     open var notificationCenter: NotificationCenter?
+    open var mainColor: UIColor = UIColor(red: 117.0 / 255.0, green: 154.0 / 255.0, blue: 228.0 / 255.0, alpha: 0) {
+        didSet {
+            DispatchQueue.main.async { [weak self] in
+                guard let `self` = self else { return }
+                self.numberKeys.forEach {
+                    $0.borderColor = self.mainColor
+                    $0.setTitleColor(self.mainColor, for: .normal)
+                    $0.highlightBackgroundColor = self.mainColor
+                }
+                self.placeholders.forEach {
+                    $0.activeColor = self.mainColor
+                    $0.inactiveColor = .white
+                    $0.errorColor = UIColor(red: 243.0 / 255.0, green: 123.0 / 255.0, blue: 123.0 / 255.0, alpha: 0)
+                }
+                self.cancelButton?.setTitleColor(self.mainColor, for: .normal)
+                self.cancelButton?.setTitleColor(self.mainColor.withAlphaComponent(0.5), for: .disabled)
+                self.deleteSignButton?.setTitleColor(self.mainColor, for: .normal)
+                self.deleteSignButton?.setTitleColor(self.mainColor.withAlphaComponent(0.5), for: .disabled)
+                self.biometricAuthButton?.setTitleColor(self.mainColor, for: .normal)
+                self.biometricAuthButton?.setTitleColor(self.mainColor.withAlphaComponent(0.5), for: .disabled)
+            }
+        }
+    }
 
     internal let passcodeConfiguration: PasscodeLockConfigurationType
     internal var passcodeLock: PasscodeLockType

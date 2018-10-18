@@ -15,7 +15,7 @@ open class PasscodeSignButton: UIButton {
     open var passcodeSign: String = "1"
     
     @IBInspectable
-    open var borderColor: UIColor = UIColor.white {
+    open var borderColor: UIColor = UIColor.gray {
         didSet {
             setupView()
         }

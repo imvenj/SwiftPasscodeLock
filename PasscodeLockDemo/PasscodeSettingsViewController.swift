@@ -70,7 +70,8 @@ class PasscodeSettingsViewController: UIViewController {
                 self?.updatePasscodeView()
             }
         }
-        
+
+        passcodeVC.mainColor = UIColor(red:0.94, green:0.44, blue:0.19, alpha:1)
         present(passcodeVC, animated: true, completion: nil)
     }
     
