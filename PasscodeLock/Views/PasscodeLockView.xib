@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -27,23 +26,23 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wK-Ol-7mm">
-                    <rect key="frame" x="169" y="149.5" width="37" height="23"/>
+                    <rect key="frame" x="188.66666666666666" y="184" width="37" height="23"/>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HbT-GO-CPk">
-                    <rect key="frame" x="148" y="176.5" width="79" height="18"/>
+                    <rect key="frame" x="167.66666666666666" y="211" width="79" height="18"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HcN-lo-9Jb" userLabel="Placeholders">
-                    <rect key="frame" x="140.5" y="210.5" width="94" height="16"/>
+                    <rect key="frame" x="160" y="245" width="94" height="16"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w14-Kb-Jnf" userLabel="Placeholder 1" customClass="PasscodeSignPlaceholderView" customModule="PasscodeLock" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
@@ -137,7 +136,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuq-ue-Jyj" customClass="PasscodeSignButton" customModule="PasscodeLock" customModuleProvider="target">
-                    <rect key="frame" x="84.5" y="250.5" width="62" height="62"/>
+                    <rect key="frame" x="104" y="285" width="62" height="62"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="cuq-ue-Jyj" secondAttribute="height" multiplier="1:1" id="6Gd-4r-nLp"/>
                         <constraint firstAttribute="width" constant="62" id="m8K-KO-D8l"/>
@@ -166,7 +165,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGh-ph-49t" customClass="PasscodeSignButton" customModule="PasscodeLock" customModuleProvider="target">
-                    <rect key="frame" x="156.5" y="250.5" width="62" height="62"/>
+                    <rect key="frame" x="176" y="285" width="62" height="62"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="CGh-ph-49t" secondAttribute="height" multiplier="1:1" id="S1o-ZR-YTx"/>
                     </constraints>
@@ -194,7 +193,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLy-90-g1a" customClass="PasscodeSignButton" customModule="PasscodeLock" customModuleProvider="target">
-                    <rect key="frame" x="228.5" y="250.5" width="62" height="62"/>
+                    <rect key="frame" x="248" y="285" width="62" height="62"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="pLy-90-g1a" secondAttribute="height" multiplier="1:1" id="iuj-FQ-EuB"/>
                     </constraints>
@@ -222,7 +221,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RR4-5o-pli" customClass="PasscodeSignButton" customModule="PasscodeLock" customModuleProvider="target">
-                    <rect key="frame" x="84.5" y="322.5" width="62" height="62"/>
+                    <rect key="frame" x="104" y="357" width="62" height="62"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="RR4-5o-pli" secondAttribute="height" multiplier="1:1" id="FhW-Jo-3aB"/>
                     </constraints>
@@ -250,7 +249,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9Z-3u-ohd" customClass="PasscodeSignButton" customModule="PasscodeLock" customModuleProvider="target">
-                    <rect key="frame" x="156.5" y="322.5" width="62" height="62"/>
+                    <rect key="frame" x="176" y="357" width="62" height="62"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="C9Z-3u-ohd" secondAttribute="height" multiplier="1:1" id="mQ9-Ed-Lye"/>
                     </constraints>
@@ -278,7 +277,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDx-aD-wJK" customClass="PasscodeSignButton" customModule="PasscodeLock" customModuleProvider="target">
-                    <rect key="frame" x="228.5" y="322.5" width="62" height="62"/>
+                    <rect key="frame" x="248" y="357" width="62" height="62"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="WDx-aD-wJK" secondAttribute="height" multiplier="1:1" id="2kK-Iv-9op"/>
                     </constraints>
@@ -306,7 +305,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RA8-jd-dag" customClass="PasscodeSignButton" customModule="PasscodeLock" customModuleProvider="target">
-                    <rect key="frame" x="84.5" y="394.5" width="62" height="62"/>
+                    <rect key="frame" x="104" y="429" width="62" height="62"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="RA8-jd-dag" secondAttribute="height" multiplier="1:1" id="hxM-Aw-iRU"/>
                     </constraints>
@@ -334,7 +333,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PbJ-Y8-MMf" customClass="PasscodeSignButton" customModule="PasscodeLock" customModuleProvider="target">
-                    <rect key="frame" x="156.5" y="394.5" width="62" height="62"/>
+                    <rect key="frame" x="176" y="429" width="62" height="62"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="PbJ-Y8-MMf" secondAttribute="height" multiplier="1:1" id="n0P-N2-PxK"/>
                     </constraints>
@@ -362,7 +361,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUD-XB-0CR" customClass="PasscodeSignButton" customModule="PasscodeLock" customModuleProvider="target">
-                    <rect key="frame" x="228.5" y="394.5" width="62" height="62"/>
+                    <rect key="frame" x="248" y="429" width="62" height="62"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="EUD-XB-0CR" secondAttribute="height" multiplier="1:1" id="Vys-hg-YCv"/>
                     </constraints>
@@ -390,7 +389,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CR-0R-0Nr" customClass="PasscodeSignButton" customModule="PasscodeLock" customModuleProvider="target">
-                    <rect key="frame" x="156.5" y="466" width="62" height="62"/>
+                    <rect key="frame" x="176" y="501" width="62" height="62"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="0CR-0R-0Nr" secondAttribute="height" multiplier="1:1" id="goj-h4-3W5"/>
                     </constraints>
@@ -418,7 +417,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etg-x7-Mx1">
-                    <rect key="frame" x="87.5" y="484" width="56" height="26"/>
+                    <rect key="frame" x="107" y="519" width="56" height="26"/>
                     <inset key="contentEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
                     <state key="normal" title="Cancel">
                         <color key="titleColor" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -428,7 +427,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H78-kl-y6L">
-                    <rect key="frame" x="233.5" y="484" width="53" height="26"/>
+                    <rect key="frame" x="252.66666666666663" y="519" width="53" height="26"/>
                     <inset key="contentEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
                     <state key="normal" title="Delete">
                         <color key="titleColor" red="0.45490196078431372" green="0.59999999999999998" blue="0.89411764705882357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -441,7 +440,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ph-dj-v7R" userLabel="TouchID Button">
-                    <rect key="frame" x="83.5" y="625" width="208" height="26"/>
+                    <rect key="frame" x="103" y="694" width="208" height="26"/>
                     <inset key="contentEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
                     <state key="normal" title="Use Biometric Authentication">
                         <color key="titleColor" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -109,6 +109,15 @@ open class PasscodeLockViewController: UIViewController, PasscodeLockTypeDelegat
         cancelButton?.isHidden = !passcodeLock.state.isCancellableAction
         biometricAuthButton?.isHidden = !passcodeLock.isBiometricAuthAllowed
     }
+
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        if UI_USER_INTERFACE_IDIOM() == .phone {
+            return [.portrait, .portraitUpsideDown]
+        }
+        else {
+            return .all
+        }
+    }
     
     // MARK: - Events
     
