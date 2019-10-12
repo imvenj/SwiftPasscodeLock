@@ -51,7 +51,11 @@ open class PasscodeLockViewController: UIViewController, PasscodeLockTypeDelegat
                 }
                 self.placeholders.forEach {
                     $0.activeColor = self.mainColor
-                    $0.inactiveColor = .white
+                    if #available(iOS 13.0, *) {
+                        $0.inactiveColor = .systemBackground
+                    } else {
+                        $0.inactiveColor = .white
+                    }
                     $0.errorColor = UIColor(red: 243.0 / 255.0, green: 123.0 / 255.0, blue: 123.0 / 255.0, alpha: 0)
                 }
                 self.cancelButton?.setTitleColor(self.mainColor, for: .normal)
