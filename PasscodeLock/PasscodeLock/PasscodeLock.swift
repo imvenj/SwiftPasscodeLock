@@ -9,6 +9,7 @@
 import Foundation
 import LocalAuthentication
 
+@available(tvOS 10.0, *)
 open class PasscodeLock: PasscodeLockType {
     
     open weak var delegate: PasscodeLockTypeDelegate?
@@ -76,6 +77,7 @@ open class PasscodeLock: PasscodeLockType {
         if let configReason = configuration.biometricAuthReason {
             reason = configReason
         } else {
+            #if os(iOS)
             if #available(iOS 11, *) {
                 switch(context.biometryType) {
                 case .touchID:
@@ -88,6 +90,9 @@ open class PasscodeLock: PasscodeLockType {
             } else {
                 reason = localizedStringFor("PasscodeLockBiometricAuthReason", comment: "Authentication required to proceed")
             }
+            #else
+            reason = localizedStringFor("PasscodeLockBiometricAuthReason", comment: "Authentication required to proceed")
+            #endif
         }
 
         context.localizedFallbackTitle = localizedStringFor("PasscodeLockBiometricAuthButton", comment: "Biometric authentication fallback button")

@@ -52,7 +52,11 @@ open class PasscodeLockViewController: UIViewController, PasscodeLockTypeDelegat
                 self.placeholders.forEach {
                     $0.activeColor = self.mainColor
                     if #available(iOS 13.0, *) {
+                        #if os(iOS)
                         $0.inactiveColor = .systemBackground
+                        #else
+                        $0.inactiveColor = .white
+                        #endif
                     } else {
                         $0.inactiveColor = .white
                     }
@@ -138,6 +142,7 @@ open class PasscodeLockViewController: UIViewController, PasscodeLockTypeDelegat
         biometricAuthButton?.isHidden = !passcodeLock.isBiometricAuthAllowed
     }
 
+    #if os(iOS)
     open override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         if UI_USER_INTERFACE_IDIOM() == .phone {
             return [.portrait, .portraitUpsideDown]
@@ -146,6 +151,7 @@ open class PasscodeLockViewController: UIViewController, PasscodeLockTypeDelegat
             return .all
         }
     }
+    #endif
     
     // MARK: - Events
     
