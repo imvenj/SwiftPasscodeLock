@@ -4,8 +4,8 @@
 import PackageDescription
 
 let package = Package(
-    name: "ZVProgressHUD",
-    platforms: [.iOS(.v8)],
+    name: "PasscodeLock",
+    platforms: [.iOS(.v8), .tvOS(.v10)],
     products: [
         .library(
             name: "PasscodeLock",
