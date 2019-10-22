@@ -32,6 +32,13 @@ $ pod install
 Add the following line to your [Cartfile](https://github.com/carthage/carthage)
 ```swift
 github "velikanov/SwiftPasscodeLock"
+
+### Swift Package Manager
+
+Import `https://github.com/imvenj/SwiftPasscodeLock` in Xcode 11.
+
+**Limitations:** Currently, Swift Package Manager does not support resource bundle, so you should include a copy of PasscodeLock.xib in your project, even if you do not want to customize the UI (colors, etc.), or your app will crash.
+
 ```
 ## Usage
 
@@ -42,18 +49,18 @@ import UIKit
 import PasscodeLock
 
 class PasscodeRepository: PasscodeRepositoryType {
-    
+
     var hasPasscode: Bool = true
     var passcode: [String]?
-    
+
     func savePasscode(passcode: [String]) {}
-    
+
     func deletePasscode() {}
-    
+
 }
 ```
 
-- Create an implementation of the `PasscodeLockConfigurationType` protocol and set your preferred passcode lock configuration options. If you set the `maximumInccorectPasscodeAttempts` to a number greather than zero, when user will reach that number of incorrect passcode attempts a notification with name `PasscodeLockIncorrectPasscodeNotification` will be posted on the default `NSNotificationCenter`. 
+- Create an implementation of the `PasscodeLockConfigurationType` protocol and set your preferred passcode lock configuration options. If you set the `maximumInccorectPasscodeAttempts` to a number greather than zero, when user will reach that number of incorrect passcode attempts a notification with name `PasscodeLockIncorrectPasscodeNotification` will be posted on the default `NSNotificationCenter`.
 
 ```swift
 import UIKit
@@ -65,11 +72,11 @@ class PasscodeLockConfiguration: PasscodeLockConfigurationType {
     var isTouchIDAllowed = true // Enable Touch ID
     var shouldRequestTouchIDImmediately = true // Use Touch ID authentication immediately
     var maximumInccorectPasscodeAttempts = 3 // Maximum incorrect passcode attempts
-    
+
     init(repository: PasscodeRepositoryType) {
         self.repository = repository
     }
-    
+
     init() {
         self.repository = PasscodeRepository() // The repository that was created earlier
     }
